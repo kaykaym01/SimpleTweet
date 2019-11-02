@@ -119,7 +119,7 @@ public class TimelineActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
-                Log.e(TAG, "onFailure!", throwable);
+                Log.e(TAG, "onFailure for populateHomeTimeline", throwable);
             }
         });
     }
