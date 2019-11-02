@@ -2,35 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:clickable="true">
 
     <TextView
         android:id="@+id/tvCreatedAt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="4dp"
-        android:layout_toEndOf="@+id/tvDot"
+        android:layout_toEndOf="@+id/tvScreenName"
         android:textColor="#A09999"
         android:textSize="12sp"
         tools:text="8h" />
-
-    <TextView
-        android:id="@+id/tvDot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/tvScreenName"
-        android:text="."
-        android:textColor="#A09999"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        tools:text="." />
 
     <ImageView
         android:id="@+id/ivProfileImage"
@@ -76,6 +64,6 @@
         android:layout_toEndOf="@+id/tvName"
         android:textColor="#A09999"
         android:textSize="12sp"
-        tools:text="\@kaykaym20" />
+        tools:text="\@kaykaym20 · " />
 
 </RelativeLayout>
