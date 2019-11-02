@@ -31,12 +31,13 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Display user name and screen name in Twitter-like fashion
+- [X] Display full tweet instead of truncated version
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/kaykaym01/SimpleTweet/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/kaykaym01/SimpleTweet/blob/master/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
