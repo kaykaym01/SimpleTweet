@@ -44,7 +44,7 @@ public class TwitterClient extends OAuthBaseClient {
 	// CHANGE THIS
 	// DEFINE METHODS for different API endpoints here
 	public void getHomeTimeline(JsonHttpResponseHandler handler) {
-		String apiUrl = getApiUrl("statuses/home_timeline.json");
+		String apiUrl = getApiUrl("statuses/home_timeline.json?tweet_mode=extended");
 		// Can specify query string params directly or through RequestParams.
 		RequestParams params = new RequestParams();
 		params.put("count", 25);
@@ -53,7 +53,7 @@ public class TwitterClient extends OAuthBaseClient {
 	}
 
 	public void getNextPageOfTweets(JsonHttpResponseHandler handler, long maxId) {
-		String apiUrl = getApiUrl("statuses/home_timeline.json");
+		String apiUrl = getApiUrl("statuses/home_timeline.json?tweet_mode=extended");
 		// Can specify query string params directly or through RequestParams.
 		RequestParams params = new RequestParams();
 		params.put("count", 25);
