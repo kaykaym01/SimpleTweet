@@ -1,22 +1,22 @@
-# Project 2 - *Name of App Here*
+# Project 2 - Simple Tweet
 
-**Name of your app** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+Simple Tweet is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **X** hours spent in total
+Time spent: 8 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] User can **sign in to Twitter** using OAuth login
-- [ ]	User can **view tweets from their home timeline**
-  - [ ] User is displayed the username, name, and body for each tweet
-  - [ ] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
-- [ ] User can refresh tweets timeline by pulling down to refresh
+- [X] User can **sign in to Twitter** using OAuth login
+- [X]	User can **view tweets from their home timeline**
+  - [X] User is displayed the username, name, and body for each tweet
+  - [X] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
+- [X] User can refresh tweets timeline by pulling down to refresh
 
 The following **optional** features are implemented:
 
-- [ ] User can view more tweets as they scroll with infinite pagination
+- [X] User can view more tweets as they scroll with infinite pagination
 - [ ] User can tap a tweet to display a "detailed" view of that tweet
 - [ ] User can open the twitter app offline and see last loaded tweets
 - [ ] On the Twitter timeline, leverage the CoordinatorLayout to apply scrolling behavior that hides / shows the toolbar.
@@ -36,7 +36,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/kaykaym01/SimpleTweet/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
