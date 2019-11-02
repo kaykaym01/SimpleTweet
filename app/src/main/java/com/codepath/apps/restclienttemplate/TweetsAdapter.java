@@ -19,10 +19,13 @@ import java.util.List;
         Context context;
         List<Tweet> tweets;
 
+        // Pass in the context and list of tweets
         public TweetsAdapter(Context context, List<Tweet> tweets) {
             this.context = context;
             this.tweets = tweets;
         }
+
+        // For each row, inflate the layout
         @NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,6 +34,7 @@ import java.util.List;
             return new ViewHolder(view);
         }
 
+        // Bind values based on the position of the element
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             //Get the data at position
@@ -45,11 +49,18 @@ import java.util.List;
             return tweets.size();
         }
 
-    // Pass in the context and list of tweets
 
-    // For each row, inflate the layout
+    // Clean all elements of the recycler
+    public void clear() {
+        tweets.clear();
+        notifyDataSetChanged();
+    }
 
-    // Bind values based on the position of the element
+    // Add a list of items -- change to type used
+    public void addAll(List<Tweet> list) {
+        tweets.addAll(list);
+        notifyDataSetChanged();
+    }
 
     // Define a viewholder
     public class ViewHolder extends RecyclerView.ViewHolder {
