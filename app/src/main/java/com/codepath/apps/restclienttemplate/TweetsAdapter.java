@@ -68,12 +68,14 @@ import java.util.List;
         TextView tvBody;
         TextView tvScreenName;
         TextView tvName;
+        TextView tvCreatedAt;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
             tvBody = itemView.findViewById(R.id.tvBody);
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvName = itemView.findViewById(R.id.tvName);
+            tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt);
         }
 
         public void bind(Tweet tweet){
@@ -81,6 +83,7 @@ import java.util.List;
             tvScreenName.setText("@" + tweet.user.screenName);
             tvName.setText(tweet.user.name);
             Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
+            tvCreatedAt.setText(tweet.getFormattedTimestamp());
         }
     }
 
