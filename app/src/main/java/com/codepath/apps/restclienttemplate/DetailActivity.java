@@ -33,11 +33,19 @@ public class DetailActivity extends AppCompatActivity {
 
     Context context;
     public static final String TAG = "DetailActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        getViews();
+        context = DetailActivity.this;
+        Tweet tweet = Parcels.unwrap(getIntent().getParcelableExtra("tweet"));
+        setText(tweet);
+    }
 
+
+    private void getViews() {
         ivProfileImage = findViewById(R.id.ivProfileImage);
         tvTweet = findViewById(R.id.tvTweet);
         tvScreenName = findViewById(R.id.tvScreenName);
@@ -50,9 +58,9 @@ public class DetailActivity extends AppCompatActivity {
         tvFavoriteText = findViewById(R.id.tvFavoriteText);
         div1 = findViewById(R.id.divider);
         div1 = findViewById(R.id.divider2);
-        context = DetailActivity.this;
+    }
 
-        Tweet tweet = Parcels.unwrap(getIntent().getParcelableExtra("tweet"));
+    private void setText(Tweet tweet) {
         tvTweet.setText(tweet.body);
         tvName.setText(tweet.user.name);
         Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
