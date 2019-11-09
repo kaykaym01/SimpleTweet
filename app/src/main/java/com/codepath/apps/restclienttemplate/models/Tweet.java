@@ -25,7 +25,12 @@ public class Tweet {
     public Tweet(){}
 
     public Tweet(JSONObject jsonObject) throws JSONException {
-        body = jsonObject.getString("full_text");
+        if (jsonObject.has("full_text")){
+            body = jsonObject.getString("full_text");
+        }
+        else {
+            body = jsonObject.getString("text");
+        }
         createdAt = jsonObject.getString("created_at");
         user = new User(jsonObject.getJSONObject("user"));
         id = jsonObject.getLong("id");
